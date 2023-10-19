@@ -19,7 +19,7 @@ Using an ESP32 board with MicroPython automated the process of sending emails us
 I strongly recommend creating a new e-mail account from which the newsletter will be sent. If something goes wrong and you get banned, it won't be your main email address :blush:  
 This newly created account must be used when registering on the SMTP mailing service.  
 After creating the sender email, the next step is to get the SMTP email server settings. I haven't been able to get them using the Gmail service so far.
-Therefore, after some wanderings, the choice fell on the service [sendgrid](https://sendgrid.com/)
+Therefore, after some wanderings, the choice fell on the service [sendgrid](https://sendgrid.com/). Its free use allows you to send 100 letters per day.
 
 ## 3. Install
 Copy the code to your project.

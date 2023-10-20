@@ -202,9 +202,11 @@ if __name__ == '__main__':
 # Встановлюємо WiFi з'єднання:
     print(connect(wlan_id, wlan_pass))
 
-# Ініціалізація сенсорів 
+# Ініціалізація таймера 
     tim_debounce = Timer(1)
-    sensor_1 = machine.Pin(34, machine.Pin.IN, machine.Pin.PULL_UP)
+# Ініціалізація сенсорів 
+# Увага! machine.Pin.PULL_UP на пінах 34 та 35 не працює, тому слід підперти на VCC фізично, або вибрати інші піни для входів !
+    sensor_1 = machine.Pin(34, machine.Pin.IN, machine.Pin.PULL_UP) 
     sensor_2 = machine.Pin(35, machine.Pin.IN, machine.Pin.PULL_UP)
     t_sensors = (sensor_1, sensor_2)
     sensor_names = ('Door', 'Fire detector') # Тут вказуємо умовні назви сенсорів

@@ -9,7 +9,7 @@ Requires: ESP32 microcontroller board. You need a sender email and you’ll need
 2. [Obtaining a free SMTP service for sending email](./README.md#2-Obtaining-a-free-SMTP-service-for-sending-email)
 3. [Install](./README.md#3-install)
 4. [Quick start](./README.md#4-Quick-start)
-5. [Example sending e-mails according to the mailing list when the sensors are triggered](./README.md#5-Example-sending-emails-according-to-the-mailing-list-when-the-sensors-are-triggered)
+5. [Example sending emails according to the mailing list when the sensors are triggered](./README.md#5-Example-sending-emails-according-to-the-mailing-list-when-the-sensors-are-triggered)
 
 ## 1. Overview
 

@@ -21,7 +21,7 @@ This newly created account must be used when registering on the SMTP mailing ser
 After creating the sender email, the next step is to get the SMTP email server settings. I haven't been able to get them through Gmail yet.
 Therefore, after a short wandering, the choice settled on the following services, taking into account the availability of a free option:  
 [Sendgrid](https://sendgrid.com/). Its free use allows you to send 100 letters per day.  
-[Brevo](https://www.brevo.com/). Its free use allows you to send 300 letters per day.
+[Brevo](https://www.brevo.com/). Its free use allows you to send 300 letters per day.  
 All of them require verification during registration by sending an SMS message code to the phone number you specified. When registering, you should specify the new e-mail that was created for sending messages.
 
 ## 3. Install

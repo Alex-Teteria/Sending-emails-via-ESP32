@@ -18,8 +18,11 @@ Using an ESP32 board with MicroPython automated the process of sending emails us
 ## 2. Obtaining a free SMTP service for sending email
 I strongly recommend creating a new e-mail account from which the newsletter will be sent. If something goes wrong and you get banned, it won't be your main email address :blush:  
 This newly created account must be used when registering on the SMTP mailing service.  
-After creating the sender email, the next step is to get the SMTP email server settings. I haven't been able to get them using the Gmail service so far.
-Therefore, after some wanderings, the choice fell on the service [sendgrid](https://sendgrid.com/). Its free use allows you to send 100 letters per day.
+After creating the sender email, the next step is to get the SMTP email server settings. I haven't been able to get them through Gmail yet.
+Therefore, after a short wandering, the choice settled on the following services, taking into account the availability of a free option:  
+[Sendgrid](https://sendgrid.com/). Its free use allows you to send 100 letters per day.  
+[Brevo](https://www.brevo.com/). Its free use allows you to send 300 letters per day.
+All of them require verification during registration by sending an SMS message code to the phone number you specified. When registering, you should specify the new e-mail that was created for sending messages.
 
 ## 3. Install
 Copy the code to your project.

@@ -9,8 +9,8 @@ Requires: ESP32 microcontroller board. You need a sender email and you’ll need
 2. [Obtaining a free SMTP service for sending email](./README.md#2-Obtaining-a-free-SMTP-service-for-sending-email)
 3. [Install](./README.md#3-install)
 4. [Quick start](./README.md#4-Quick-start)
-5. [Example sending emails according to the mailing list when the sensors are triggered](./README.md#5-Example-sending-emails-according-to-the-mailing-list-when-the-sensors-are-triggered)
-
+5. [Example](./README.md#5-Example)
+   
 ## 1. Overview
 
 Using an ESP32 board with MicroPython automated the process of sending emails using an SMTP server. As an example, sending notifications by e-mail when sensors are triggered is implemented. It's easy to use and you can receive realtime alterts in all your projects. To send e-mails using MicroPython, the [uMail](https://github.com/shawwwn/uMail) module is used. This module is not part of the MicroPython library, so it needs to be downloaded.
@@ -98,7 +98,8 @@ class Set_time:
         except:
             print('Error! Unable to create request instance')
 ```
-5. ## Example sending emails according to the mailing list when the sensors are triggered
+5. ## Example
+#### Sending e-mails according to the mailing list when the sensors are triggered
 ```python
 # При спрацюванні сенсорів розсилаються e-mail згідно списка розсилки
 # При цьому, як subject зазначається час зміни стану сенсорів

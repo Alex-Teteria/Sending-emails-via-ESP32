@@ -32,3 +32,73 @@ Copy the code to your project.
 
 ```python
 import network
+
+def connect(ssid, passwd):
+    wlan.disconnect()
+    wlan.connect(ssid, passwd)
+    while not wlan.isconnected():
+        pass
+    return wlan.ifconfig()
+
+if __name__ == '__main__':
+    wlan_id = 'your wi-fi ssid'
+    wlan_pass = 'your password'
+    
+    wlan = network.WLAN(network.STA_IF)
+    wlan.active(True)
+    print(connect(wlan_id, wlan_pass))
+```
+#### Creating an object of the Mail_bot class
+```python
+class Mail_bot:
+    """This is our Mail bot"""
+    def __init__(self, smtp_server, smtp_login, smtp_key, from_email):
+        self.smtp_server = smtp_server
+        self.smtp_login = smtp_login
+        self.smtp_key = smtp_key
+        self.from_email = from_email
+        
+    def send_mail(self, to_email, subject, message):
+        to_user = 'To: '+to_email.split('@')[0]+' <'+to_email+'>\n'
+        smtp = umail.SMTP(self.smtp_server, 465, ssl=True)
+        smtp.login(self.smtp_login, self.smtp_key)
+        smtp.to(to_email)
+        smtp.write(self.from_email)
+        smtp.write(to_user)
+        smtp.write('Subject: ' + subject +'\n\n')
+        l = message.split('\n')
+        for s in l:
+            smtp.write(s + '\n')
+        smtp.send()
+        smtp.quit()
+```
+#### Creating an object of the Set_time class
+```python
+class Set_time:
+    '''
+    Підводить годинник реалного часу (rtc) до поточного часу сервера, який вказано
+    в параметрі url. Для формування запиту використовує бібліотеку urequests
+    '''
+    def __init__(self, rtc, time_zone=2, url='http://time.in.ua/'):
+        self.rtc = rtc # примірник об'єкту machine.RTC()
+        self.time_zone = time_zone # UTC+2
+        self.url = url
+        self.d_month = {'Jan': 1, 'Feb':2, 'Mar': 3, 'Apr': 4, 'May': 5, 'Jun': 6,
+                        'Jul': 7, 'Aug': 8, 'Sep': 9, 'Oct': 10, 'Nov': 11, 'Dec': 12}
+        self.d_weekday = {'Mon,': 1, 'Tue,': 2, 'Wed,': 3, 'Thu,': 4, 'Fri,': 5, 'Sat,': 6, 'Sun,': 7}
+                
+    def set_rtc(self):
+        try:
+            r = urequests.head(self.url)
+            weekday, day, month, year, current_time, mt = r.headers['Date'].split()
+            hours, minutes, seconds = [int(x) for x in current_time.split(':')]
+            print(int(year), self.d_month[month], int(day), self.d_weekday[weekday], int(hours), int(minutes), int(seconds))
+# Заводимо годинник:   
+            self.rtc.datetime((int(year), self.d_month[month], int(day), self.d_weekday[weekday], int(hours)+self.time_zone, int(minutes), int(seconds), 200))
+        except:
+            print('Error! Unable to create request instance')
+```
+#### Example sending e-mails according to the mailing list when the sensors are triggered
+```python
+
+'''

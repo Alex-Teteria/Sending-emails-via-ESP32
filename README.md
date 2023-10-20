@@ -98,8 +98,8 @@ class Set_time:
         except:
             print('Error! Unable to create request instance')
 ```
-5. ## Example
-#### Sending e-mails according to the mailing list when the sensors are triggered
+## 4. Example
+### Sending e-mails according to the mailing list when the sensors are triggered
 ```python
 # При спрацюванні сенсорів розсилаються e-mail згідно списка розсилки
 # При цьому, як subject зазначається час зміни стану сенсорів

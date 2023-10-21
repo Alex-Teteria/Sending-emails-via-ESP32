@@ -16,7 +16,7 @@ Requires: ESP32 microcontroller board. You need a sender email and you’ll need
 Using an ESP32 board with MicroPython automated the process of sending emails using an SMTP server. As an example, sending notifications by e-mail when sensors are triggered is implemented. It's easy to use and you can receive realtime alterts in all your projects. To send e-mails using MicroPython, the [uMail](https://github.com/shawwwn/uMail) module is used. This module is not part of the MicroPython library, so it needs to be downloaded.
 
 ## 2. Obtaining a free SMTP service for sending email
-I strongly recommend creating a new e-mail account from which the newsletter will be sent. If something goes wrong and you get banned, it won't be your main email address :blush:  
+Before starting all further actions, it is advisable to create a new e-mail account from which the mailing will take place. If something goes wrong and you get banned, it won't be your primary email address :blush:  
 This newly created account must be used when registering on the SMTP mailing service.  
 After creating the sender email, the next step is to get the SMTP email server settings. I haven't been able to get them through Gmail yet.
 Therefore, after a short wandering, the choice settled on the following services, taking into account the availability of a free option:  

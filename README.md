@@ -142,7 +142,9 @@ class Set_time:
             print('Error! Unable to create request instance')
 
 class Mail_bot:
-    """This is our Mail bot"""
+    """Приймає налаштування сервера як рядки:
+       'your SMTP Server', 'Login', 'SMTP key value', 'From: ESP32 <user@domain>\n'
+    """
     def __init__(self, smtp_server, smtp_login, smtp_key, from_email):
         self.smtp_server = smtp_server
         self.smtp_login = smtp_login
@@ -205,7 +207,7 @@ if __name__ == '__main__':
 # Ініціалізація таймера 
     tim_debounce = Timer(1)
 # Ініціалізація сенсорів 
-# Увага! machine.Pin.PULL_UP на пінах 34 та 35 не працює, тому слід підперти на VCC фізично, або вибрати інші піни для входів !
+# Увага! machine.Pin.PULL_UP на пінах 34 та 35 не працює, тому слід підтягнути їх на VCC фізично, або вибрати інші піни для входів!
     sensor_1 = machine.Pin(34, machine.Pin.IN, machine.Pin.PULL_UP) 
     sensor_2 = machine.Pin(35, machine.Pin.IN, machine.Pin.PULL_UP)
     t_sensors = (sensor_1, sensor_2)

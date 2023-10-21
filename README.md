@@ -8,7 +8,7 @@ Requires: ESP32 microcontroller board. You need a sender email and you’ll need
 1. [Overview](./README.md#1-overview)
 2. [Obtaining a free SMTP service for sending email](./README.md#2-Obtaining-a-free-SMTP-service-for-sending-email)
 3. [Install](./README.md#3-install)
-4. [Quick start](./README.md#4-Quick-start)
+4. [Objects used](./README.md#4-Objects-used)
 5. [Example](./README.md#5-Example)
    
 ## 1. Overview
@@ -28,8 +28,8 @@ All of them require verification during registration by sending an SMS message c
 ## 3. Install
 Copy the code to your project.
 
-## 4. Quick start
-#### Typical Wi-Fi connection code for ESP board (Station mode)
+## 4. Objects used
+#### Typical Wi-Fi connection code for ESP32 board (Station mode)
 
 ```python
 import network
@@ -244,3 +244,4 @@ if __name__ == '__main__':
     while True:
         pass
 '''
+###### [Top](./README.md#contents)

@@ -142,8 +142,13 @@ class Set_time:
             print('Error! Unable to create request instance')
 
 class Mail_bot:
-    """Приймає налаштування сервера як рядки:
-       'your SMTP Server', 'Login', 'SMTP key value', 'From: ESP32 <user@domain>\n'
+    """
+    Приймає налаштування сервера як рядки:
+    'your SMTP Server', 'Login', 'SMTP key value', 'From: ESP32 <user@domain>\n'
+    Має один метод send_mail, який приймає як рядки параметри:
+    to_email - куди відправляти,
+    subject - тема листа,
+    message - саме повідомлення
     """
     def __init__(self, smtp_server, smtp_login, smtp_key, from_email):
         self.smtp_server = smtp_server

@@ -243,6 +243,6 @@ if __name__ == '__main__':
     mail_bot = Mail_bot(smtp_server, smtp_login, smtp_key, smtp_from)
     while True:
         pass
-'''
+```
 
 ###### [Top](./README.md#contents)

@@ -244,5 +244,6 @@ if __name__ == '__main__':
     while True:
         pass
 ```
-
+## 5. Example
+### Sending e-mails according to the mailing list when the sensors are triggered
 ###### [Top](./README.md#contents)
